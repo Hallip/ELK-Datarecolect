@@ -52,7 +52,7 @@
 					<section>
 						<h2>Clientes </h2>
 							<img src="./img/python.png" style="border:0px; background-color: transparent;" height="100" >
-							<p>Clientes oficiales de bajo nivel para Elasticsearch. Su objetivo es proporcionar un terreno común para todos los códigos relacionados con Elasticsearch</p>
+							<p>Clientes oficiales de bajo y alto nivel para Elasticsearch. Su objetivo es proporcionar un terreno común para todos los códigos relacionados con Elasticsearch</p>
 					</section>
 				</section>
 				<section>
@@ -168,7 +168,42 @@
 				</section>
 				<section>
 					<section>
-						<h1>Python Client</h1>
+						<h1><a href="https://pypi.org/project/elasticsearch/">Python Client</a></h1>
+						<small>Utilizando REST API, Elasticsearch guarda los datos y los indexa automáticamente. Asigna tipos a los campos y de esa manera una búsqueda se puede hacer de forma inteligente y rápida utilizando filtros y consultas diferentes.</small>
+						<p class="fragment">Scraping data</p>
+						<p class="fragment">Creating Index</p>
+						<p class="fragment">Records Indexing</p>
+						<p class="fragment">Querying Records</p>
+					</section>
+					<section>
+						<h2>Hello World</h2>
+						<section data-markdown>
+							<script type="text/template">
+								Insertar documento con dos fields: timestamp, menssage
+
+								```
+
+								from elasticsearch import Elasticsearch
+								import datetime
+
+								regTime = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
+
+								data = {
+									"@timestamp": regTime,
+									"menssage": "Hello World"
+								}
+
+								es = Elasticsearch(
+									["elastic:NY5aRJaOZROF3vmDP0B9VQ16@ce20cb247cec4c50ba3344288ea59e7f.us-east-1.aws.found.io:9243"],
+									scheme="https",
+									request_timeout=30
+									)
+
+								es.index(index='hello_world', doc_type='people', body=data)
+
+								```
+							</script>
+						</section>
 					</section>
 				</section>
 			</div>

@@ -125,8 +125,45 @@
 						</section>
 					</section>
 					<section>
-						<h2>input</h2>
+
+						<h2><a href="https://www.elastic.co/guide/en/logstash/current/input-plugins.html">input</a></h2>
 						<img src="./img/Input.gif" style="border:0px; background-color: transparent;"  align="center">
+					</section>
+					<section>
+						<h2><a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html#filter-plugins">Filters</a></h2>
+						<section data-markdown>
+							<script type="text/template">
+								Filters mas comunes
+
+								```
+
+								filter {
+										grok {
+											match => {
+												"message" => "Duration: %{NUMBER:duration}"
+											}
+											dissect {
+												mapping =>{
+													"message" => "%{ts} %{+ts} %{+ts} %{src}"
+												}
+											}
+											mutate {
+												split => ["hostname", "."]
+												add_field => { "shortHost" => "%{hostname[0]}" }
+											}
+											mutate {
+												rename => ["shortHostname", "hostname" ]
+											}
+										}
+								}
+								```
+							</script>
+						</section>
+					</section>
+					<section>
+						<h2><a href="https://www.elastic.co/guide/en/logstash/current/output-plugins.html">Output</a></h2>
+						<img src="./img/output.gif" style="border:0px; background-color: transparent;" align="center">
+
 					</section>
 				</section>
 				<section>

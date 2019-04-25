@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Recoleccion de data para ElasticSearch</h2>
+					<h4>Beats, Logstash, Python API</h4>
+					<p>
+						<small>Created by <a href="https://github.com/Hallip">Juan José Montoya</a> Powered by <a href="https://github.com/hakimel/reveal.js/">reveal.js</a></small>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h3>Arquitectura ElasticSearch<h3>
+							<body>
+									<img src="./img/elk.png" border="0" >
+							</body>
+					</section>
+					<section>
+						<h4>Beats</h4>
+						<p>Beats es la plataforma para transportadores de datos de un solo propósito. Envían datos de cientos o miles de máquinas y sistemas a Logstash o Elasticsearch.</p>
+					</section>
+					<section>
+						<h4>Logstash</h4>
+					</section>
+					<section>
+						<h4>APIs</h4>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

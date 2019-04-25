@@ -89,6 +89,50 @@
 						<h2>Arquitectura de los Beats</h2>
 						<img src="./img/beats-arquitectura.png" style="border:0px; background-color: transparent;"  align="center">
 					</section>
+					<section>
+						<h2>Beats Central Management</h2>
+						<p>Beats central management proporciona una manera de definir y administrar configuraciones en una ubicación central en Kibana e implementar rápidamente los cambios de configuración en todos los Beats que se ejecutan en su empresa.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Logstash</h1>
+						<img src="./img/logstashdiagram.png" style="border:0px; background-color: transparent;"  align="center">
+					</section>
+					<section>
+						<section data-markdown>
+							<script type="text/template">
+								## Logstash Pipeline
+
+								logstash puede definir varias pipelines, como procesos de ingesta de datos que se dividen en tres partes
+
+
+								```
+								input {
+										//Un complemento de entrada permite que Logstash
+										//lea una fuente específica de eventos.
+								}
+								filter {
+										//Un complemento de filtro que realiza un procesamiento
+										//intermedio en un evento.
+								}
+								output {
+										//Un complemento de salida envía datos de eventos a un
+										//destino particular.
+								}
+								```
+							</script>
+						</section>
+					</section>
+					<section>
+						<h2>input</h2>
+						<img src="./img/Input.gif" style="border:0px; background-color: transparent;"  align="center">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Python API</h1>
+					</section>
 				</section>
 			</div>
 		</div>
